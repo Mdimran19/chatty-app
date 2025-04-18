@@ -40,7 +40,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chatty-app-84qw.onrender.com", // frontend origin
+    origin: "http://localhost:5173", // frontend origin
     credentials: true,
   }
 });
