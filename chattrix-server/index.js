@@ -7,8 +7,7 @@ import messageRoutes from "./routes/message.route.js";
 import { connectDB } from "./lib/db.js";
 import {app, server} from "./lib/socket.js"
 import cors from "cors";
-import path from 'path'
-//const app = express    
+import path from 'path';
 const PORT = process.env.PORT
 const __dirname = path.resolve()                                                                                                        
 
@@ -37,4 +36,3 @@ server.listen(PORT, ()=>{
     console.log(`server is on going ${PORT}`)
    
 })
-//good
