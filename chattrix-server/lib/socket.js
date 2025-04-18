@@ -5,7 +5,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server,{
     cors: {
-        origin: "https://chatty-app-84qw.onrender.com",
+        origin: "http://localhost:5173",
         credentials: true,
     }
 });
