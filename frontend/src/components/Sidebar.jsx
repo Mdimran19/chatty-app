@@ -12,8 +12,8 @@ const Sidebar = () => {
     getUsers()
   }, [getUsers]);
   const fillteredUsers = showOnlineOnly ? users.filter(user => onlineUsers.includes(user._id)) : users;
-  if (isUsersLoading) return
-  <SidebarSkeleton />
+  if (isUsersLoading) return  <SidebarSkeleton />
+
   return (
     <aside className='h-full w-20 lg:w-72 border-r border-base-300 flex flex-col transition-all duration-200'>
       <div className="border-b border-base-300 w-full p-5">
@@ -24,7 +24,7 @@ const Sidebar = () => {
         {/* ONline fillter */}
         <div className="mt-3 hidden lg:flex items-center gap-2">
           <label className="cursor-pointer flex items-center gap-2">
-            <input type="checkbox" checked={showOnlineOnly} onChange={() => setShowOnlineOnly(e.target.checked)}
+            <input type="checkbox" checked={showOnlineOnly} onChange={(e) => setShowOnlineOnly(e.target.checked)}
               className='chcekbox checkbox-sm' />
             <span className='text-sm'>show online only</span>
           </label>
